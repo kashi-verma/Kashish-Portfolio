@@ -9,38 +9,31 @@ const projectsData = [
     id: 1,
     title: "Fidelio Feedback Application",
     description: "Feedback collection web application that genrates URL for authenticated users",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    image: "/images/projects/image1.png",
+    tag: ["Fidelio", ],
+    gitUrl: "https://github.com/kashi-verma/Fidelio-feedback-app",
+    previewUrl: "https://fidelio-feedback-app-3pyw.vercel.app/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Banco - Online Banking Web Application",
+    description: "Banco is a web application that provides online tranzactions facility and much more",
+    image: "/images/projects/image2.png",
+    tag: [ "Banco"],
+    gitUrl: "https://github.com/kashi-verma/Horizon",
+    previewUrl: "https://banking-jet.vercel.app/sign-in",
   },
+  
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    title: "Pet-Lovers an E-commerce Application",
+    description: "At Pet Lovers' Choice we believe that whole, real, human grade ingredients create a pet food that will help your pets live a long, heathy, happy, and active",
+    image: "/images/projects/image3.png",
+    tag: [ "Pet-Lovers"],
+    gitUrl: "https://github.com/kashi-verma/Pet-Lovers",
     previewUrl: "/",
   },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+ 
   {
     id: 5,
     title: "React Firebase Template",
@@ -62,7 +55,7 @@ const projectsData = [
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("Fidelio");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -88,17 +81,17 @@ const ProjectsSection = () => {
         <ProjectTag
           onClick={handleTagChange}
           name="Fidelio"
-          isSelected={tag === "All"}
+          isSelected={tag === "Fidelio"}
         />
         <ProjectTag
           onClick={handleTagChange}
           name="Banco"
-          isSelected={tag === "Web"}
+          isSelected={tag === "Banco"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Pet-Lovers"
+          isSelected={tag === "Pet-Lovers"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

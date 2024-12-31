@@ -16,7 +16,7 @@ const navLinks = [
   },
   {
     title: "Contact",
-    path: "#contact",
+    path: "+91 9772150014",
   },
 ];
 
